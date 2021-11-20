@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
-.card{
-  height: 29rem;
+.start-100 {
+  left: 88%!important;
+}
+
+.rounded-pill {
+  z-index: 1;
 }
