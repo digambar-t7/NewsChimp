@@ -29,7 +29,7 @@ export class News extends Component {
 
   // this method is need for infinite scroll function
   fetchMoreData = async() => {
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=69278872befb40d381a1342f606c0edd&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
     let parsedData = await data.json();
     this.setState({
@@ -49,7 +49,7 @@ export class News extends Component {
 
   updateNews = async () => {
     this.props.setProgress(10);
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=69278872befb40d381a1342f606c0edd&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     this.props.setProgress(20);
     let data = await fetch(url);

@@ -8,6 +8,9 @@ import LoadingBar from "react-top-loading-bar";
 export class App extends Component {
   pageSize = 3;
 
+  // accessing the api key present stored in the .env.local file
+  apiKey = process.env.REACT_APP_NEWS_API_KEY;
+
   state = {
     // declaring progress as state variable
     progress: 10,
@@ -33,6 +36,7 @@ export class App extends Component {
             element={
               <News
                 setProgress={this.setProgress}
+                apiKey = {this.apiKey}
                 key="general"
                 pageSize={this.pageSize}
                 country="in"
@@ -47,6 +51,7 @@ export class App extends Component {
             element={
               <News
                 setProgress={this.setProgress}
+                apiKey = {this.apiKey}
                 key="business"
                 pageSize={this.pageSize}
                 country="in"
@@ -61,6 +66,7 @@ export class App extends Component {
             element={
               <News
                 setProgress={this.setProgress}
+                apiKey = {this.apiKey}
                 key="entertainment"
                 pageSize={this.pageSize}
                 country="in"
@@ -75,6 +81,7 @@ export class App extends Component {
             element={
               <News
                 setProgress={this.setProgress}
+                apiKey = {this.apiKey}
                 key="health"
                 pageSize={this.pageSize}
                 country="in"
@@ -89,6 +96,7 @@ export class App extends Component {
             element={
               <News
                 setProgress={this.setProgress}
+                apiKey = {this.apiKey}
                 key="science"
                 pageSize={this.pageSize}
                 country="in"
@@ -103,6 +111,7 @@ export class App extends Component {
             element={
               <News
                 setProgress={this.setProgress}
+                apiKey = {this.apiKey}
                 key="sports"
                 pageSize={this.pageSize}
                 country="in"
@@ -117,6 +126,7 @@ export class App extends Component {
             element={
               <News
                 setProgress={this.setProgress}
+                apiKey = {this.apiKey}
                 key="technology"
                 pageSize={this.pageSize}
                 country="in"
